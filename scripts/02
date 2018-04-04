@@ -1,0 +1,4 @@
+echo "apt-get update > /var/log/update_script.log" > /etc/cron.weekly/apt-script
+echo "apt-get upgrade > /var/log/update_script.log" >> /etc/cron.weekly/apt-script
+chmod 755 /etc/cron.weekly/apt-script
+echo "0 4 * * 0 /etc/cron.weekly/apt-script" >> /etc/crontab
